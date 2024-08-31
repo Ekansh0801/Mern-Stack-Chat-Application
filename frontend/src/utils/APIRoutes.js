@@ -1,4 +1,4 @@
-export const BASE_URL="https://mern-stack-chat-application-backend.onrender.com";
+export const BASE_URL="http://localhost:5000";
 export const loginRoute = `${BASE_URL}/api/auth/login`;
 export const registerRoute = `${BASE_URL}/api/auth/register`;
 export const logoutRoute = `${BASE_URL}/api/auth/logout`;
