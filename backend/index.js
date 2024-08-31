@@ -8,7 +8,13 @@ const socket = require("socket.io");
 const PORT=process.env.PORT || 5000;
 require("dotenv").config();
 
-app.use(cors());
+app.use(cors(
+  {
+    origin:["https://deploy-mern-1whq.vercal.app"],
+    methods:["POST","GET"],
+    credentials:true
+  }
+));
 app.use(express.json());
 
 mongoose
@@ -33,7 +39,7 @@ const server = app.listen(PORT, () =>
 );
 const io = socket(server, {
   cors: {
-    origin: "*",
+    origin: process.env.ORIGIN,
     credentials: true,
   },
 });
