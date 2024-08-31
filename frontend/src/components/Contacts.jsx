@@ -23,7 +23,7 @@ export default function Contacts({ contacts, changeChat }) {
         <Container>
           <div className="brand">
             <img src={Logo} alt="logo" />
-            <h3>Talky</h3>
+            <h3>Snappy</h3>
           </div>
           <div className="contacts">
             {contacts.map((contact, index) => {
